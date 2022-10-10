@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const cookieSession = require("cookie-session");
 
 const dbConfig = require("./app/config/db.config");
 
@@ -14,13 +13,6 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(
-    cookieSession({
-        name: "10kc-session",
-        secret: "COOKIE_SECRET",
-        httpOnly: true
-    })
-);
 
 const db = require("./app/models");
 

@@ -6,10 +6,6 @@ const {
     Types: {ObjectId: ObjectId},
 } = require("mongoose");
 
-exports.allAccess = (req, res) => {
-    res.status(200).send("Public Content.");
-};
-
 
 exports.upload = async (req, res) => {
     let userId = req.userId
